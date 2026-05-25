@@ -37,27 +37,21 @@ public class Curso {
     }
 
     public Long getId() { return id;}
-
     public void setId(Long id) { this.id = id;}
 
     public String getNome() { return nome; }
-
     public void setNome(String nome) {this.nome = nome;}
 
     public String getModalidade() { return modalidade; }
-
     public void setModalidade(String modalidade) { this.modalidade = modalidade; }
 
     public String getDescricaoTecnica() { return descricaoTecnica; }
-
     public void setDescricaoTecnica(String descricaoTecnica) { this.descricaoTecnica = descricaoTecnica;}
 
     public Integer getCargaHoraria() { return cargaHoraria; }
-
     public void setCargaHoraria(Integer cargaHoraria) { this.cargaHoraria = cargaHoraria; }
 
     public Integer getTotalVagas() { return totalVagas; }
-
     public void setTotalVagas(Integer totalVagas) { this.totalVagas = totalVagas; }
     
 }

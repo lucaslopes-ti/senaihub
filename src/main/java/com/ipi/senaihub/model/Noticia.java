@@ -34,7 +34,7 @@ public class Noticia {
         this.titulo = titulo;
         this.corpoTexto = corpoTexto;
         this.dataNoticia = dataNoticia;
-        this.urImagemCapa = urImagemCapa;
+        this.urlImagemCapa = urlImagemCapa;
         this.autor = autor;
         
     }        
