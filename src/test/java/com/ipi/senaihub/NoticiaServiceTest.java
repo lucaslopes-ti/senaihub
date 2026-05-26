@@ -1,4 +1,4 @@
-package br.com.neves.teste;
+package com.ipi.senaihub;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
