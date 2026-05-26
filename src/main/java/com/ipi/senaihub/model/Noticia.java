@@ -45,7 +45,7 @@ public class Noticia {
     public String getTitulo() { return titulo; }
     public void setTitulo(String titulo) { this.titulo = titulo; }
 
-    public void setCorpoTexto(String corpo){ this.corpoTexto = corpoTexto; }
+    public void setCorpoTexto(String corpoTexto){ this.corpoTexto = corpoTexto; }
     public String getCorpoTexto(){ return corpoTexto; }
 
     public LocalDateTime getDataNoticia() { return dataNoticia; }

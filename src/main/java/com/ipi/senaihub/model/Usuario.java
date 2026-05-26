@@ -48,19 +48,19 @@ public class Usuario {
     public void setId(Long id){ this.id = id;}
 
     public String getNomeCompleto(){ return nomeCompleto;}
-    public Void setNomeCompleto(String nomeCompleto){ this.nomeCompleto = nomeCompleto;}
+    public void setNomeCompleto(String nomeCompleto){ this.nomeCompleto = nomeCompleto;}
 
-    public String getEmail(){return email}
-    public Void setEmail(String email){this.email = email}
+    public String getEmail(){return email;}
+    public void setEmail(String email){this.email = email;}
 
-    public String getSenha(){return senha}
-    public Void setSenha(String senha){ this.senha = senha;}
+    public String getSenha(){return senha;}
+    public void setSenha(String senha){ this.senha = senha;}
 
-    public String getNivelAcesso(){ return nivelAcesso}
-    public Void setNivelAcesso(Role nivelAcesso){ this.nivelAcesso = nivelAcesso}
+    public Role getNivelAcesso(){ return nivelAcesso;}
+    public void setNivelAcesso(Role nivelAcesso){ this.nivelAcesso = nivelAcesso;}
 
-    public Boolean getpodePostarNoticias(){ return podePostarNoticias}
-    public Void setpodePostarNoticias(Boolean podePostarNoticias){this.podePostarNoticias = podePostarNoticias }
+    public Boolean getpodePostarNoticias(){ return podePostarNoticias;}
+    public void setpodePostarNoticias(Boolean podePostarNoticias){this.podePostarNoticias = podePostarNoticias;}
 
 }
 

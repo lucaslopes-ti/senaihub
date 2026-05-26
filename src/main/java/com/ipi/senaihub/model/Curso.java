@@ -25,6 +25,8 @@ public class Curso {
 
     @Column(nullable = false)
     private Integer totalVagas;
+
+    public Curso() {}
   
     public Curso(Long id, String nome, String modalidade, String descricaoTecnica, Integer cargaHoraria,
             Integer totalVagas) {
