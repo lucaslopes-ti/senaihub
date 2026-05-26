@@ -18,8 +18,8 @@ public class CursoService {
     }
 
     public Curso salvarCurso(Curso curso) {
-        if (curso.getTotalVagas() < 0) {
-            throw new IllegalArgumentException("O número total de vagas não pode ser negativo."); // 4. Validação para garantir que o número total de vagas seja positivo, lança uma exceção se for negativo.
+        if (curso.getTotalVagas() == null || curso.getTotalVagas() <= 0) {
+            throw new IllegalArgumentException("O total de vagas deve ser maior que zero."); // 4. Validação para garantir que o número total de vagas seja positivo.
         }
 
         return cursoRepository.save(curso); // 4. Método para salvar um curso, utiliza o método save do repositório.
