@@ -1,4 +1,7 @@
 package com.ipi.senaihub;
+import com.ipi.senaihub.model.Noticia;
+import com.ipi.senaihub.repository.NoticiaRepository;
+import com.ipi.senaihub.service.NoticiaService;
 import static org.mockito.Mockito.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

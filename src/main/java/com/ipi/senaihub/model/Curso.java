@@ -26,6 +26,8 @@ public class Curso {
     @Column(nullable = false)
     private Integer totalVagas;
 
+    public Curso() {}
+
     public Curso(long l, String string, String string2, int i, String string3, int j) {}
   
     public Curso(Long id, String nome, String modalidade, String descricaoTecnica, Integer cargaHoraria,Integer totalVagas) {

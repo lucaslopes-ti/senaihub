@@ -21,7 +21,6 @@ import org.springframework.data.domain.Pageable;
 import java.util.List;
 
 @ExtendWith(MockitoExtension.class)
-
 public class NoticiasServiceTestDayane {
     
     
@@ -48,9 +47,8 @@ public class NoticiasServiceTestDayane {
                 .thenReturn(paginaEsperada);
 
         Page<Noticia> resultado =
-                noticiaService.listarNoticiasPaginadas(pageable);
+                noticiaService.listarNoticias(pageable);
 
         Assertions.assertEquals(2, resultado.getContent().size());
     }
-}
 }

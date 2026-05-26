@@ -1,5 +1,8 @@
 package com.ipi.senaihub;
 
+import com.ipi.senaihub.model.Noticia;
+import com.ipi.senaihub.repository.NoticiaRepository;
+import com.ipi.senaihub.service.NoticiaService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -30,7 +33,7 @@ public class NoticiaServiceTest {
         Page<Noticia> paginaEsperada = new PageImpl<>(List.of(), pageable, 0);
         Mockito.when(noticiaRepository.findAll(pageable)).thenReturn(paginaEsperada);
         
-        noticiaService.listarNoticiasPaginadas(pageable);
+        noticiaService.listarNoticias(pageable);
         
         Mockito.verify(noticiaRepository, Mockito.times(1)).findAll(pageable);
     }
