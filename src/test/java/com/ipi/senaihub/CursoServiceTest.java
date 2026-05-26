@@ -3,12 +3,12 @@ package com.ipi.senaihub;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-
-import static org.mockito.Mockito.mock;
-
+import org.mockito.Mockito;
 import org.junit.jupiter.api.Assertions;
 import com.ipi.senaihub.model.Curso;
 import com.ipi.senaihub.repository.CursoRepository;
+import com.ipi.senaihub.service.CursoService;
+
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 @ExtendWith(MockitoExtension.class) // Anotação para habilitar o suporte ao Mockito no JUnit 5, permitindo o uso de objetos falsos e injeção de dependências durante os testes.
@@ -23,13 +23,12 @@ public class CursoServiceTest {
 
     @Test
     public void deveLancarExcecaoQuandoVagasForemZeroOuMenos(){
-        Curso curso = new Curso();
+        Curso curso = new Curso(null, null, null, null, null, null);
         curso.setNome("Curso de Teste");
         curso.setTotalVagas(0); // Define o número total de vagas como um valor negativo para testar a validação.
     
         IllegalArgumentException exception = Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            IllegalArgumentException exception.class,
-            () -> cursoService.salvarCurso(curso)
+            cursoService.salvarCurso(curso); // Tenta criar um curso usando o serviço, o que deve lançar uma exceção devido à validação falha.
         });
 
         Assertions.assertEquals("O número total de vagas não pode ser negativo ou zero.", exception.getMessage()); // Verifica se a mensagem da exceção lançada é a esperada, confirmando que a validação está funcionando corretamente.
@@ -37,4 +36,6 @@ public class CursoServiceTest {
         Mockito.verify(cursoRepository, Mockito.never()).save(Mockito.any(Curso.class)); // Verifica se o método save do cursoRepository nunca foi chamado, garantindo que o curso não foi salvo no banco de dados devido à validação falha.
     
     }
+
+    
 }
