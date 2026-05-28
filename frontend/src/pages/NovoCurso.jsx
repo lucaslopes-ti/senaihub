@@ -29,7 +29,7 @@ function NovoCurso() {
                                 </div>
 
                                 <div className="d-flex justify-content-end mt-4">
-                                    <Link to="/" className="btn btn-dark">
+                                    <Link to="/" className="btn btn-white">
                                         Cancelar
                                     </Link>
                                     <button type="button" className="btn btn-primary">
