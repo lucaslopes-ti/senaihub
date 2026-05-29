@@ -1,8 +1,466 @@
 $primary: #ff0000;
 $secondary: #005DAA;
 
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap");
 @import "bootstrap/scss/bootstrap";
 
 body {
-    background-color: #f8f9fa;
+    background-color: #edf1f6;
+    color: #0b1220;
+    font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+}
+
+.tech-home {
+    color: #0b1220;
+}
+
+.tech-navbar {
+    background: #0b1f3a;
+    color: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 12px 30px rgba(5, 14, 30, 0.35);
+}
+
+.tech-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.tech-brand-mark {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: #ff0000;
+    color: #ffffff;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+}
+
+.tech-brand-title {
+    font-weight: 700;
+    letter-spacing: 0.06em;
+}
+
+.tech-brand-subtitle {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.tech-nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.tech-nav-links a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.tech-nav-links a:hover {
+    color: #ffffff;
+}
+
+.tech-hero {
+    position: relative;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.tech-hero-title {
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    margin-top: 1rem;
+}
+
+.tech-hero-subtitle {
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.tech-pill {
+    display: inline-flex;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+}
+
+.tech-hero-content {
+    animation: techFadeUp 0.7s ease-out;
+}
+
+.tech-hero-carousel .carousel-indicators {
+    margin-bottom: 1.5rem;
+}
+
+.tech-hero-carousel .carousel-indicators [data-bs-target] {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.tech-hero-carousel .carousel-control-prev-icon,
+.tech-hero-carousel .carousel-control-next-icon {
+    filter: invert(1);
+}
+
+.tech-hero-slide {
+    min-height: 560px;
+    padding: 4.5rem 0 4rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: #ffffff;
+}
+
+.tech-hero-slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(8, 16, 34, 0.35), rgba(8, 16, 34, 0.6));
+    pointer-events: none;
+}
+
+.tech-hero-slide .container {
+    position: relative;
+    z-index: 1;
+}
+
+.tech-hero-slide--one {
+    background:
+        linear-gradient(120deg, #0b1f3a 0%, #0a3d6e 45%, #0a6fb3 100%),
+        radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.2), transparent 45%);
+}
+
+.tech-hero-slide--two {
+    background:
+        linear-gradient(120deg, #12132b 0%, #1b2f5a 50%, #0f4c81 100%),
+        radial-gradient(circle at 85% 25%, rgba(0, 255, 210, 0.25), transparent 50%);
+}
+
+.tech-hero-slide--three {
+    background:
+        linear-gradient(120deg, #0b1f3a 0%, #0a2c5a 45%, #0a6fb3 100%),
+        radial-gradient(circle at 20% 30%, rgba(255, 0, 0, 0.2), transparent 55%);
+}
+
+.tech-hero-panel {
+    padding: 2rem;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 20px 45px rgba(5, 14, 30, 0.4);
+}
+
+.tech-hero-panel-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.75rem;
+}
+
+.tech-hero-panel-number {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.tech-highlights {
+    padding: 4rem 0;
+    background: #f8fafc;
+}
+
+.tech-section-header {
+    max-width: 720px;
+    margin-bottom: 2rem;
+}
+
+.tech-section-title {
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    font-weight: 700;
+}
+
+.tech-section-subtitle {
+    color: #475569;
+    margin-bottom: 0;
+}
+
+.tech-highlight-card {
+    height: 100%;
+    padding: 1.6rem;
+    border-radius: 18px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+    animation: techFadeUp 0.8s ease-out;
+}
+
+.tech-spotlight-card {
+    height: 100%;
+    padding: 1.9rem;
+    border-radius: 22px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 18px 32px rgba(15, 23, 42, 0.12);
+    position: relative;
+    overflow: hidden;
+    animation: techFadeUp 0.8s ease-out;
+}
+
+.tech-spotlight-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto auto 0;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, #ff0000, #0a6fb3);
+}
+
+.tech-spotlight-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.1rem;
+}
+
+.tech-spotlight-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    background: #0b1f3a;
+    color: #ffffff;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+}
+
+.tech-spotlight-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #0a6fb3;
+    font-weight: 600;
+}
+
+.tech-highlights .col-md-4:nth-child(2) .tech-spotlight-card::before {
+    background: linear-gradient(90deg, #0a6fb3, #00b3ff);
+}
+
+.tech-highlights .col-md-4:nth-child(3) .tech-spotlight-card::before {
+    background: linear-gradient(90deg, #ff0000, #ff6a00);
+}
+
+.tech-highlights .col-md-4:nth-child(2) .tech-spotlight-card {
+    animation-delay: 0.1s;
+}
+
+.tech-highlights .col-md-4:nth-child(3) .tech-spotlight-card {
+    animation-delay: 0.2s;
+}
+
+.tech-footer {
+    padding: 2.5rem 0;
+    background: #0b1f3a;
+    color: #ffffff;
+}
+
+.tech-footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.tech-footer-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tech-footer a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+
+.tech-footer a:hover {
+    color: #ffffff;
+}
+
+@keyframes techFadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tech-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 4.5rem 0 3.5rem;
+    background: linear-gradient(135deg, #0b2d4f 0%, #0f4c81 50%, #0a6fb3 100%);
+    color: #ffffff;
+}
+
+.tech-hero::before {
+    content: "";
+    position: absolute;
+    inset: -30% 0 0 0;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.18), transparent 45%),
+        radial-gradient(circle at 85% 15%, rgba(0, 0, 0, 0.28), transparent 50%);
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.tech-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.tech-pill {
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+}
+
+.tech-hero-title {
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    margin-top: 1rem;
+}
+
+.tech-hero-card {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 1.75rem;
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 20px 45px rgba(2, 12, 27, 0.25);
+}
+
+.tech-hero-card-header {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 1.25rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.tech-metrics {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.tech-metric {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.tech-metric-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.tech-metric-label {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.tech-section {
+    padding: 4rem 0;
+}
+
+.tech-section-alt {
+    background: #eef3f8;
+}
+
+.tech-section-header {
+    max-width: 720px;
+    margin-bottom: 2rem;
+}
+
+.tech-section-title {
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    font-weight: 700;
+}
+
+.tech-section-subtitle {
+    color: #475569;
+    margin-bottom: 0;
+}
+
+.tech-card {
+    height: 100%;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 1.6rem;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.tech-card-title {
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    margin-bottom: 0.75rem;
+}
+
+.tech-card-accent {
+    border-left: 4px solid #0a6fb3;
+}
+
+.tech-step {
+    height: 100%;
+    padding: 1.8rem;
+    border-radius: 18px;
+    border: 1px dashed #cbd5f5;
+    background: #f8fafc;
+}
+
+.tech-step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: #0b2d4f;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.tech-cta {
+    background: linear-gradient(120deg, #0b2d4f 0%, #0a6fb3 100%);
+    color: #ffffff;
+}
+
+.tech-cta .tech-section-subtitle {
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.tech-cta-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
