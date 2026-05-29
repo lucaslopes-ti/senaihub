@@ -1,8 +1,8 @@
 package com.ipi.senaihub;
+
 import com.ipi.senaihub.model.Noticia;
 import com.ipi.senaihub.repository.NoticiaRepository;
 import com.ipi.senaihub.service.NoticiaService;
-import static org.mockito.Mockito.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -24,16 +24,15 @@ public class CursoNoticiaTest {
 
     @Test
     public void deveChamarRepositorioAoPublicarNoticia() {
-        
+
         Noticia noticia = new Noticia();
-        
+
         Mockito.when(noticiaRepository.save(Mockito.any(Noticia.class)))
-               .thenReturn(noticia);
-        
+                .thenReturn(noticia);
+
         noticiaService.publicarNoticia(noticia);
-        
-       
+
         Mockito.verify(noticiaRepository, Mockito.times(1)).save(noticia);
     }
-    
+
 }
